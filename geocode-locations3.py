@@ -3,9 +3,6 @@ import csv
 
 geolocator = Nominatim()
 
-location = geolocator.geocode("12 Hampton Ct.  Alameda CA")
-print location
-
 costcos = csv.reader(open('costcos-limited.csv'), delimiter=',')
 header_skipped = False
 
