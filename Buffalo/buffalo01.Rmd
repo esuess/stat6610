@@ -1,0 +1,199 @@
+---
+title: "Buffalo01"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data Scraping with R rvest
+### Daily average tempurature of Buffalo, NY
+### [Weather Underground, Buffalo, NY 2016](https://www.wunderground.com/history/airport/KBUF/2016/01/01/DailyHistory.html?req_city=Buffalo&req_state=NY&reqdb.zip=14201&reqdb.magic=1&reqdb.wmo=99999&MR=1)
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. 
+
+Here will be develop an R program to scrape data from the Weather Underground website for Buffalo, NY in 2016.  Note that 2016 was a leap year, so there will be 266 data values to scrape from 266 webpages.
+
+# Scraping one value
+
+First we try to read one data value into R.  We will scrape the Mean Temperature on Friday, January 1, 2016.  The value was 29.
+
+The webpage we will start with is [Weather Underground, Buffalo, NY January 1, 2016 2016](https://www.wunderground.com/history/airport/KBUF/2016/01/01/DailyHistory.html?req_city=Buffalo&req_state=NY&reqdb.zip=14201&reqdb.magic=1&reqdb.wmo=99999&MR=1).  Note that the date is in the web address. 
+
+We will be using the [rvest](https://github.com/hadley/rvest) R package.  It is useful to read over the examples on Hadley's github page.  It is also useful to watch the RStudio videos about extracting data from the web.
+
+- [Estracting data from the web Part1 httr](https://www.rstudio.com/resources/webinars/extracting-data-from-the-web-part-1/https://www.rstudio.com/resources/webinars/extracting-data-from-the-web-part-1/)
+- [Extracting data from the web Part2 rvest](https://www.rstudio.com/resources/webinars/extracting-data-from-the-web-part-2/)
+
+To get started we need to examine the html for the webpage we are trying to read from to try to find the nearby code to give to rvest to find the value we need.  To say the webapge, open it in Firefox (or other browswer), the right-click on the page, and then click Save Page As.  Browse to where you save the file and then open it in a text editor.  Try to do a search for the value we aer looking for, here 29.  You may need to click next a few times to find it.  The value should have Mean Tempurature just about it.  When you find it you will see something like.
+
+     </div>
+		    <table id="historyTable" class="responsive airport-history-summary-table" cellspacing="0" cellpadding="0">
+		    <thead>
+		    <tr>
+		    <th>&nbsp;</th>
+		    <th>Actual</th>
+		    <th>Average </th>
+		    <th>Record </th>
+		    </tr>
+		    </thead>
+		    <tbody>
+		    <tr>
+		    <td class="history-table-grey-header">Temperature</td>
+		    <td colspan="3" class="history-table-grey-header">&nbsp;</td>
+		    </tr>
+		    <tr>
+		    <td class="indent"><span>Mean Temperature</span></td>
+		    <td>
+      <span class="wx-data"><span class="wx-value">29</span><span class="wx-unit">&nbsp;°F</span></span>
+     </td>
+        <td>
+          
+The start of this block of code has **div** and tghe calue is in a **span** line.  So after trying a few other things, these two words find what we are looking for when using rvest.
+
+Here is some code modified from the [rvest](https://github.com/hadley/rvest) website.  It reads all of the value from the webpage with **div** and **span**.  It is the 13^th value that we need.
+
+```{r}
+library(rvest)
+
+buffalo <- read_html("https://www.wunderground.com/history/airport/KBUF/2016/01/01/DailyHistory.html")
+  mean.temp <- buffalo %>% 
+    html_nodes("div span") %>%
+    html_text() %>%
+    as.numeric()
+  mean.temp
+```
+
+```{r}
+mean.temp[13]
+```
+
+## Scraping three values
+
+```{r}
+buffalo.data <- numeric(3)
+
+buffalo <- read_html("https://www.wunderground.com/history/airport/KBUF/2016/01/01/DailyHistory.html")
+mean.temp <- buffalo %>% 
+  html_nodes("div span") %>%
+  html_text() %>%
+  as.numeric()
+#mean.temp
+mean.temp[13]
+buffalo.data[1] <- mean.temp[13]
+
+buffalo <- read_html("https://www.wunderground.com/history/airport/KBUF/2016/01/02/DailyHistory.html")
+mean.temp <- buffalo %>% 
+  html_nodes("div span") %>%
+  html_text() %>%
+  as.numeric()
+#mean.temp
+mean.temp[13]
+buffalo.data[2] <- mean.temp[13]
+
+buffalo <- read_html("https://www.wunderground.com/history/airport/KBUF/2016/01/03/DailyHistory.html")
+mean.temp <- buffalo %>% 
+  html_nodes("div span") %>%
+  html_text() %>%
+  as.numeric()
+#mean.temp
+mean.temp[13]
+buffalo.data[3] <- mean.temp[13]
+
+buffalo.data
+```
+
+## Scraping the full year of values
+
+2016 was a leap year.  So February had 29 days.  Also, April, June, September, and November have 30 days.  So we need to do a bit of checking to make sure we only collect data for the days of the year.
+
+```{r}
+buffalo.data <- numeric()
+
+M <- 12
+B <- 31
+
+for (m in 1:M){
+  for (d in 1:B){ 
+    if (m == 2 & d > 29) break
+    if ( ( m %in% c(4,6,9,11) ) &  d > 30 ) break
+
+    buffalo <- read_html(paste0("https://www.wunderground.com/history/airport/KBUF/2016/",m,"/",d,"/DailyHistory.html"))
+    mean.temp <- buffalo %>% 
+      html_nodes("div span") %>%
+      html_text() %>%
+      as.numeric()
+    #mean.temp
+    #mean.temp[13]
+    buffalo.data <- c(buffalo.data,mean.temp[13])
+  }
+}
+
+buffalo.data
+```
+
+Next we will create the dates for each day of 2016.  R has a function *seq()* that works with dates.  The *as.Date()* tells R that values are dates.
+
+```{r}
+buffalo.date1 <- data.frame(seq(as.Date("2016/1/1"), as.Date("2016/12/31"), "days"))
+```
+
+Finally, we will put the dates and mean tempuratures together into a dataframe.  We will use another of Hadley's packages **plyr**.
+
+```{r}
+library(dplyr)
+
+buffalo.data1 <- as.data.frame(buffalo.data)
+
+buffalo.final <- bind_cols(buffalo.date1, buffalo.data1)
+
+colnames(buffalo.final) <- c("date","temp")
+
+buffalo.final
+
+summary(buffalo.final$temp)
+```
+
+## Visualize the data
+
+We start by making a scatterplot using base R.
+
+```{r}
+plot(buffalo.final)
+```
+
+Next, using the *qplot()* function from the **ggplot2** package.
+
+
+```{r}
+library(ggplot2)
+
+qplot(date, temp, data=buffalo.final)
+```
+
+And finally, using the *ggplot()* function.
+
+```{r}
+p <- ggplot(buffalo.final, aes(date,temp))
+p + geom_point()
+```
+
+```{r}
+p + geom_point() + stat_smooth(method=lm, level=0.95)
+```
+
+```{r}
+p + geom_point() + stat_smooth()
+```
+
+```{r}
+p + geom_point() + stat_smooth(method=loess)
+```
+
+**Question:** What do you see in your plot?  Is it warmer in the Summer months and colder in the Winter months?
+
+
+
