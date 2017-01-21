@@ -16,7 +16,7 @@ for m in range(1, 13):
         break
  
       # Open wunderground.com url
-      url = "http://www.wunderground.com/history/airport/KBUF/2016/" + str(m) + "/" + str(d) + "/DailyHistory.html"
+      url = "https://www.wunderground.com/history/airport/KBUF/2016/" + str(m) + "/" + str(d) + "/DailyHistory.html"
       page = urllib2.urlopen(url)
  
       # Get temperature from page
