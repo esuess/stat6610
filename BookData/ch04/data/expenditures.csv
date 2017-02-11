@@ -1,0 +1,351 @@
+year,category,expenditure
+2008,Food,6443
+2008,Alcoholic Beverages,444
+2008,Housing,17109
+2008,Apparel,1801
+2008,Transportation,8604
+2008,Healthcare,2976
+2008,Entertainment,2835
+2008,Personal Care,616
+2008,Reading,116
+2008,Education,1046
+2008,Tobacco Products,317
+2008,Miscellaneous,840
+2008,Cash Contributions,1737
+2008,Personal Insurance,5605
+2007,Food,6113
+2007,Alcoholic Beverages,457
+2007,Housing,16920
+2007,Apparel,1881
+2007,Transportation,8758
+2007,Healthcare,2853
+2007,Entertainment,2698
+2007,Personal Care,588
+2007,Reading,118
+2007,Education,945
+2007,Tobacco Products,323
+2007,Miscellaneous,808
+2007,Cash Contributions,1821
+2007,Personal Insurance,5336
+2006,Food,6111
+2006,Alcoholic Beverages,497
+2006,Housing,16366
+2006,Apparel,1874
+2006,Transportation,8508
+2006,Healthcare,2766
+2006,Entertainment,2376
+2006,Personal Care,585
+2006,Reading,117
+2006,Education,888
+2006,Tobacco Products,327
+2006,Miscellaneous,846
+2006,Cash Contributions,1869
+2006,Personal Insurance,5270
+2005,Food,5931
+2005,Alcoholic Beverages,426
+2005,Housing,15167
+2005,Apparel,1886
+2005,Transportation,8344
+2005,Healthcare,2664
+2005,Entertainment,2388
+2005,Personal Care,541
+2005,Reading,126
+2005,Education,940
+2005,Tobacco Products,319
+2005,Miscellaneous,808
+2005,Cash Contributions,1663
+2005,Personal Insurance,5204
+2004,Food,5781
+2004,Alcoholic Beverages,459
+2004,Housing,13918
+2004,Apparel,1816
+2004,Transportation,7801
+2004,Healthcare,2574
+2004,Entertainment,2218
+2004,Personal Care,581
+2004,Reading,130
+2004,Education,905
+2004,Tobacco Products,288
+2004,Miscellaneous,690
+2004,Cash Contributions,1408
+2004,Personal Insurance,4823
+2003,Food,5340
+2003,Alcoholic Beverages,391
+2003,Housing,13432
+2003,Apparel,1640
+2003,Transportation,7781
+2003,Healthcare,2416
+2003,Entertainment,2060
+2003,Personal Care,527
+2003,Reading,127
+2003,Education,783
+2003,Tobacco Products,290
+2003,Miscellaneous,606
+2003,Cash Contributions,1370
+2003,Personal Insurance,4055
+2002,Food,5375
+2002,Alcoholic Beverages,376
+2002,Housing,13283
+2002,Apparel,1749
+2002,Transportation,7759
+2002,Healthcare,2350
+2002,Entertainment,2079
+2002,Personal Care,526
+2002,Reading,139
+2002,Education,752
+2002,Tobacco Products,320
+2002,Miscellaneous,792
+2002,Cash Contributions,1277
+2002,Personal Insurance,3899
+2001,Food,5321
+2001,Alcoholic Beverages,349
+2001,Housing,13011
+2001,Apparel,1743
+2001,Transportation,7633
+2001,Healthcare,2182
+2001,Entertainment,1953
+2001,Personal Care,485
+2001,Reading,141
+2001,Education,648
+2001,Tobacco Products,308
+2001,Miscellaneous,750
+2001,Cash Contributions,1258
+2001,Personal Insurance,3737
+2000,Food,5158
+2000,Alcoholic Beverages,372
+2000,Housing,12319
+2000,Apparel,1856
+2000,Transportation,7417
+2000,Healthcare,2066
+2000,Entertainment,1863
+2000,Personal Care,564
+2000,Reading,146
+2000,Education,632
+2000,Tobacco Products,319
+2000,Miscellaneous,776
+2000,Cash Contributions,1192
+2000,Personal Insurance,3365
+1999,Food,5031
+1999,Alcoholic Beverages,318
+1999,Housing,12057
+1999,Apparel,1743
+1999,Transportation,7011
+1999,Healthcare,1959
+1999,Entertainment,1891
+1999,Personal Care,408
+1999,Reading,159
+1999,Education,635
+1999,Tobacco Products,300
+1999,Miscellaneous,867
+1999,Cash Contributions,1181
+1999,Personal Insurance,3436
+1998,Food,4810
+1998,Alcoholic Beverages,309
+1998,Housing,11713
+1998,Apparel,1674
+1998,Transportation,6616
+1998,Healthcare,1903
+1998,Entertainment,1746
+1998,Personal Care,401
+1998,Reading,161
+1998,Education,580
+1998,Tobacco Products,273
+1998,Miscellaneous,860
+1998,Cash Contributions,1109
+1998,Personal Insurance,3381
+1997,Food,4801
+1997,Alcoholic Beverages,309
+1997,Housing,11272
+1997,Apparel,1729
+1997,Transportation,6457
+1997,Healthcare,1841
+1997,Entertainment,1813
+1997,Personal Care,528
+1997,Reading,164
+1997,Education,571
+1997,Tobacco Products,264
+1997,Miscellaneous,847
+1997,Cash Contributions,1001
+1997,Personal Insurance,3223
+1996,Food,4698
+1996,Alcoholic Beverages,309
+1996,Housing,10747
+1996,Apparel,1752
+1996,Transportation,6382
+1996,Healthcare,1770
+1996,Entertainment,1834
+1996,Personal Care,513
+1996,Reading,159
+1996,Education,524
+1996,Tobacco Products,255
+1996,Miscellaneous,855
+1996,Cash Contributions,940
+1996,Personal Insurance,3060
+1995,Food,4505
+1995,Alcoholic Beverages,277
+1995,Housing,10458
+1995,Apparel,1704
+1995,Transportation,6014
+1995,Healthcare,1732
+1995,Entertainment,1612
+1995,Personal Care,403
+1995,Reading,162
+1995,Education,471
+1995,Tobacco Products,269
+1995,Miscellaneous,766
+1995,Cash Contributions,925
+1995,Personal Insurance,2964
+1994,Food,4411
+1994,Alcoholic Beverages,278
+1994,Housing,10106
+1994,Apparel,1644
+1994,Transportation,6044
+1994,Healthcare,1755
+1994,Entertainment,1567
+1994,Personal Care,397
+1994,Reading,165
+1994,Education,460
+1994,Tobacco Products,259
+1994,Miscellaneous,749
+1994,Cash Contributions,960
+1994,Personal Insurance,2938
+1993,Food,4399
+1993,Alcoholic Beverages,268
+1993,Housing,9636
+1993,Apparel,1676
+1993,Transportation,5453
+1993,Healthcare,1776
+1993,Entertainment,1626
+1993,Personal Care,385
+1993,Reading,166
+1993,Education,455
+1993,Tobacco Products,268
+1993,Miscellaneous,715
+1993,Cash Contributions,961
+1993,Personal Insurance,2908
+1992,Food,4723
+1992,Alcoholic Beverages,301
+1992,Housing,9477
+1992,Apparel,1710
+1992,Transportation,5228
+1992,Healthcare,1634
+1992,Entertainment,1500
+1992,Personal Care,387
+1992,Reading,162
+1992,Education,426
+1992,Tobacco Products,275
+1992,Miscellaneous,765
+1992,Cash Contributions,958
+1992,Personal Insurance,2750
+1991,Food,4271
+1991,Alcoholic Beverages,297
+1991,Housing,9252
+1991,Apparel,1735
+1991,Transportation,5151
+1991,Healthcare,1554
+1991,Entertainment,1472
+1991,Personal Care,399
+1991,Reading,163
+1991,Education,447
+1991,Tobacco Products,276
+1991,Miscellaneous,860
+1991,Cash Contributions,950
+1991,Personal Insurance,2787
+1990,Food,4296
+1990,Alcoholic Beverages,293
+1990,Housing,8703
+1990,Apparel,1618
+1990,Transportation,5120
+1990,Healthcare,1480
+1990,Entertainment,1422
+1990,Personal Care,364
+1990,Reading,153
+1990,Education,406
+1990,Tobacco Products,274
+1990,Miscellaneous,842
+1990,Cash Contributions,816
+1990,Personal Insurance,2592
+1989,Food,4152
+1989,Alcoholic Beverages,284
+1989,Housing,8609
+1989,Apparel,1582
+1989,Transportation,5187
+1989,Healthcare,1407
+1989,Entertainment,1424
+1989,Personal Care,366
+1989,Reading,157
+1989,Education,367
+1989,Tobacco Products,261
+1989,Miscellaneous,643
+1989,Cash Contributions,900
+1989,Personal Insurance,2472
+1988,Food,3748
+1988,Alcoholic Beverages,269
+1988,Housing,8079
+1988,Apparel,1489
+1988,Transportation,5093
+1988,Healthcare,1298
+1988,Entertainment,1329
+1988,Personal Care,334
+1988,Reading,150
+1988,Education,342
+1988,Tobacco Products,242
+1988,Miscellaneous,578
+1988,Cash Contributions,693
+1988,Personal Insurance,2249
+1987,Food,3664
+1987,Alcoholic Beverages,289
+1987,Housing,7569
+1987,Apparel,1446
+1987,Transportation,4600
+1987,Healthcare,1135
+1987,Entertainment,1193
+1987,Personal Care,330
+1987,Reading,142
+1987,Education,337
+1987,Tobacco Products,232
+1987,Miscellaneous,562
+1987,Cash Contributions,741
+1987,Personal Insurance,2175
+1986,Food,3448
+1986,Alcoholic Beverages,271
+1986,Housing,7292
+1986,Apparel,1346
+1986,Transportation,4842
+1986,Healthcare,1135
+1986,Entertainment,1149
+1986,Personal Care,303
+1986,Reading,140
+1986,Education,314
+1986,Tobacco Products,230
+1986,Miscellaneous,522
+1986,Cash Contributions,746
+1986,Personal Insurance,2127
+1985,Food,3477
+1985,Alcoholic Beverages,306
+1985,Housing,7087
+1985,Apparel,1420
+1985,Transportation,4587
+1985,Healthcare,1108
+1985,Entertainment,1170
+1985,Personal Care,303
+1985,Reading,141
+1985,Education,321
+1985,Tobacco Products,219
+1985,Miscellaneous,529
+1985,Cash Contributions,805
+1985,Personal Insurance,2016
+1984,Food,3290
+1984,Alcoholic Beverages,275
+1984,Housing,6674
+1984,Apparel,1319
+1984,Transportation,4304
+1984,Healthcare,1049
+1984,Entertainment,1055
+1984,Personal Care,289
+1984,Reading,132
+1984,Education,303
+1984,Tobacco Products,228
+1984,Miscellaneous,451
+1984,Cash Contributions,706
+1984,Personal Insurance,1897
